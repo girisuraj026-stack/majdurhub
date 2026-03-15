@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0.98 0.005 75;
+    --foreground: 0.18 0.04 40;
+    --card: 1 0 0;
+    --card-foreground: 0.18 0.04 40;
+    --popover: 1 0 0;
+    --popover-foreground: 0.18 0.04 40;
+    --primary: 0.62 0.19 42;
+    --primary-foreground: 1 0 0;
+    --secondary: 0.94 0.03 60;
+    --secondary-foreground: 0.25 0.05 40;
+    --muted: 0.94 0.02 70;
+    --muted-foreground: 0.5 0.05 50;
+    --accent: 0.88 0.08 55;
+    --accent-foreground: 0.22 0.06 40;
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 1 0 0;
+    --border: 0.88 0.03 65;
+    --input: 0.88 0.03 65;
+    --ring: 0.62 0.19 42;
+    --radius: 0.75rem;
+    --chart-1: 0.62 0.19 42;
+    --chart-2: 0.7 0.15 170;
+    --chart-3: 0.6 0.18 280;
+    --chart-4: 0.75 0.15 90;
+    --chart-5: 0.55 0.2 20;
+    --sidebar: 0.96 0.01 70;
+    --sidebar-foreground: 0.18 0.04 40;
+    --sidebar-primary: 0.62 0.19 42;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.92 0.04 60;
+    --sidebar-accent-foreground: 0.18 0.04 40;
+    --sidebar-border: 0.88 0.03 65;
+    --sidebar-ring: 0.62 0.19 42;
+
+    /* Status colors */
+    --status-pending: 0.75 0.15 80;
+    --status-accepted: 0.6 0.15 240;
+    --status-inprogress: 0.62 0.19 42;
+    --status-completed: 0.62 0.18 145;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Bricolage Grotesque", sans-serif;
+  }
+}
+
+@layer utilities {
+  .app-container {
+    @apply max-w-[480px] mx-auto min-h-screen relative bg-background;
+    box-shadow: 0 0 40px oklch(0.18 0.04 40 / 0.08);
+  }
+  .page-content {
+    @apply pb-24 pt-4 px-4;
+  }
+  .status-pending {
+    background: oklch(0.96 0.08 80);
+    color: oklch(0.45 0.15 70);
+  }
+  .status-accepted {
+    background: oklch(0.93 0.06 240);
+    color: oklch(0.4 0.15 240);
+  }
+  .status-inProgress {
+    background: oklch(0.94 0.08 55);
+    color: oklch(0.45 0.18 42);
+  }
+  .status-completed {
+    background: oklch(0.93 0.08 145);
+    color: oklch(0.4 0.15 145);
+  }
+}
